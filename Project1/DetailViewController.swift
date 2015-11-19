@@ -12,7 +12,6 @@ import Social
 class DetailViewController: UIViewController {
 
     //@IBOutlet weak var detailDescriptionLabel: UILabel! //IBOUtlet connects Interface Builder, weak because View owns it not in memory
-
    
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var buttonTwitter: UIButton!
@@ -57,11 +56,12 @@ class DetailViewController: UIViewController {
 //    }
     
     @IBAction func socialButtonTapped(sender: AnyObject) {
-        if (sender.tag == 0) {
+        if sender.tag == 0 {
             socialShare("Facebook")
-        }else if (sender.tag == 1) {
+        }else if sender.tag == 1 {
             socialShare("Twitter")
         }
+        
     }
     
     func sharedTapped()
